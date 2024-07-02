@@ -44,6 +44,12 @@
             android:name=".ads.OpenAdActivity"
             android:exported="false" />
         <activity
+            android:name=".ads.bidding.BiddingActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ads.perloader.PerLoaderTestActivity"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

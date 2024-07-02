@@ -41,7 +41,11 @@ public class RewardedAdActivity extends AppCompatActivity {
                 showAdInfo("onAdError: "+adError.getErrorCode()+" "+adError.getErrorMessage());
                 Log.i(TAG, "onAdError: "+adError.getErrorCode()+" "+adError.getErrorMessage());
             }
-
+            @Override
+            public void onAdShowError(AdError adError) {
+                Log.i(TAG, "onAdShowError: ");
+                showAdInfo("onAdShowError");
+            }
             @Override
             public void onAdClicked() {
                 Log.i(TAG, "onAdClicked: ");

@@ -49,6 +49,12 @@ public class InterstitialAdActivity extends AppCompatActivity {
             }
 
             @Override
+            public void onAdShowError(AdError adError) {
+                Log.i(TAG, "onAdShowError: ");
+                showAdInfo("onAdShowError");
+            }
+
+            @Override
             public void onAdExposure() {
                 Log.i(TAG, "onAdExposure: ");
                 showAdInfo("onAdExposure");

@@ -101,6 +101,11 @@ public class NativeAdActivity extends AppCompatActivity {
                     Log.i(TAG, "onAdError: "+adError.getErrorCode()+" "+adError.getErrorMessage());
                     showAdInfo("onAdError: "+adError.getErrorCode()+" "+adError.getErrorMessage());
                 }
+                @Override
+                public void onAdShowError(AdError adError) {
+                    Log.i(TAG, "onAdShowError: ");
+                    showAdInfo("onAdShowError");
+                }
             });
         }
     }

@@ -89,6 +89,11 @@ public class TemplateAdActivity extends AppCompatActivity {
                     showAdInfo("onAdExposed");
                 }
                 @Override
+                public void onAdShowError(AdError adError) {
+                    Log.i(TAG, "onAdShowError: ");
+                    showAdInfo("onAdShowError");
+                }
+                @Override
                 public void onRenderSuccess() {
                     Log.i(TAG, "onRenderSuccess");
                     showAdInfo("onRenderSuccess");

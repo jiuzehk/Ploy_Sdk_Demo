@@ -58,6 +58,12 @@ public class BannerAdActivity extends AppCompatActivity {
             }
 
             @Override
+            public void onAdShowError(AdError adError) {
+                Log.i(TAG, "onAdShowError: ");
+                showAdInfo("onAdShowError");
+            }
+
+            @Override
             public void onAdClicked() {
                 Log.i(TAG, "onAdClicked: ");
                 showAdInfo("onAdClicked");

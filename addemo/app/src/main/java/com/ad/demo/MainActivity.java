@@ -19,6 +19,8 @@ import com.ad.demo.ads.NativeAdActivity;
 import com.ad.demo.ads.OpenAdActivity;
 import com.ad.demo.ads.RewardedAdActivity;
 import com.ad.demo.ads.TemplateAdActivity;
+import com.ad.demo.ads.bidding.BiddingActivity;
+import com.ad.demo.ads.perloader.PerLoaderTestActivity;
 import com.ad.demo.ui.SimpleDividerItemDecoration;
 import com.tools.sdk_debug.AdDebugHelp;
 
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         dataList.add("Native AD");
         dataList.add("ExpressView AD");
         dataList.add("Rewarded AD");
+        dataList.add("PerLoader MODE");
+        dataList.add("Bidding");
         dataList.add("Open Test Tools");
         adTypeRecycler.setLayoutManager(new LinearLayoutManager(this));
         adTypeRecycler.setAdapter(new AdTypeAdapter(dataList, new AdTypeAdapter.OnItemClickListener() {
@@ -75,8 +79,16 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(MainActivity.this, RewardedAdActivity.class);
                         startActivity(intent);
                         break;
+                    case "PerLoader MODE":
+                        intent = new Intent(MainActivity.this, PerLoaderTestActivity.class);
+                        startActivity(intent);
+                        break;
+                    case "Bidding":
+                        intent = new Intent(MainActivity.this, BiddingActivity.class);
+                        startActivity(intent);
+                        break;
                     case "Open Test Tools":
-                        AdDebugHelp.getInstance().init(MainActivity.this).startActivity();
+                        AdDebugHelp.getInstance().init(MainActivity.this).startActivity(MainActivity.this);
                         break;
                     default:
                         break;
