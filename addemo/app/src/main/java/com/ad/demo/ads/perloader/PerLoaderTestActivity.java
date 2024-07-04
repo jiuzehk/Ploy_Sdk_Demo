@@ -23,20 +23,9 @@ public class PerLoaderTestActivity extends AppCompatActivity {
     private Button start_preloader;  //开启预加载
     private Button get_reward_video_adController;  //展示激励视频广告
     private Button get_interstitials_adController;  // 展示插屏广告
-    private Button get_banner_adController;  //展示banner广告
 
     private RewardVideoPreLoader rewardVideoPreLoader;
     private InterstitialPreLoader interstitialPreLoader;
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        try {
-            PreLoader.onActivityResume();  // Activity onResume时调用
-        } catch (PreLoader.PreLoaderException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,15 +73,6 @@ public class PerLoaderTestActivity extends AppCompatActivity {
                 if (isReady) {
                     interstitialPreLoader.showAd(PerLoaderTestActivity.this);
                 }
-
-            }
-        });
-
-        get_banner_adController.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i(TAG, "get_banner_adController...");
-
 
             }
         });
