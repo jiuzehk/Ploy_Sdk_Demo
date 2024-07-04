@@ -24,7 +24,6 @@ public class PerLoaderTestActivity extends AppCompatActivity {
     private Button get_reward_video_adController;  //展示激励视频广告
     private Button get_interstitials_adController;  // 展示插屏广告
     private Button get_banner_adController;  //展示banner广告
-    private Button get_preload_info;  //查看缓存信息
 
     private RewardVideoPreLoader rewardVideoPreLoader;
     private InterstitialPreLoader interstitialPreLoader;
@@ -47,17 +46,14 @@ public class PerLoaderTestActivity extends AppCompatActivity {
         start_preloader = findViewById(R.id.start_preloader);
         get_reward_video_adController = findViewById(R.id.get_reward_video_adController);
         get_interstitials_adController = findViewById(R.id.get_interstitials_adController);
-        get_banner_adController = findViewById(R.id.get_banner_adController);
-        get_preload_info = findViewById(R.id.get_preload_info);
 
-        preloadRewardVideo();
-        preloadInterstitial();
 
         start_preloader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "start preload...");
-                Toast.makeText(getApplicationContext(), "not support!", Toast.LENGTH_LONG).show();
+                preloadRewardVideo();
+                preloadInterstitial();
             }
         });
 
@@ -97,17 +93,6 @@ public class PerLoaderTestActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.i(TAG, "get_banner_adController...");
 
-
-            }
-        });
-
-
-        get_preload_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i(TAG, "get_preload_info...");
-
-                PreLoader.dump(); //查看缓存信息
 
             }
         });

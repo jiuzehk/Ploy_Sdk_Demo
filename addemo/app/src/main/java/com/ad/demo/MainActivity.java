@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         dataList.add("Open AD");
         dataList.add("Banner AD");
         dataList.add("Interstitial AD");
+        dataList.add("Rewarded AD");
         dataList.add("Native AD");
         dataList.add("ExpressView AD");
-        dataList.add("Rewarded AD");
         dataList.add("PerLoader MODE");
         dataList.add("Bidding");
         dataList.add("Open Test Tools");
