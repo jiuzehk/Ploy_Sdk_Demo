@@ -18,7 +18,6 @@ import com.poly.sdk.client.AdError;
 import com.poly.sdk.client.AdRequest;
 import com.poly.sdk.client.BannerAdSize;
 import com.poly.sdk.client.banner.BannerAdListener;
-import com.unity3d.services.banners.api.Banner;
 
 public class BannerAdActivity extends AppCompatActivity {
     private static final String TAG = BannerAdActivity.class.getName();
