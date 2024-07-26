@@ -100,7 +100,7 @@ public class PolyAdLoader {
 
     private RewardVideoPreLoader loadRewardVideoAdImpl(Activity activity, BiddingListener biddingListener) {
 
-        RewardVideoPreLoader rewardVideoPreLoader = RewardVideoPreLoader.create(activity, REWARDVIDEODI);
+        RewardVideoPreLoader rewardVideoPreLoader = RewardVideoPreLoader.get(activity, REWARDVIDEODI);
         rewardVideoPreLoader.setRewardVideoAdListener(new RewardVideoAdListener() {
 
             @Override
@@ -154,7 +154,7 @@ public class PolyAdLoader {
     }
 
     private InterstitialPreLoader loadInterstitialAdImpl(Activity activity, BiddingListener biddingListener) {
-        InterstitialPreLoader interstitialPreLoader = InterstitialPreLoader.create(activity, INTERSTITIALID);
+        InterstitialPreLoader interstitialPreLoader = InterstitialPreLoader.get(activity, INTERSTITIALID);
         interstitialPreLoader.setInterstitialAdListener(new InterstitialAdListener() {
             @Override
             public void onAdClicked() {

@@ -6,12 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ad.demo.ads.BannerAdActivity;
 import com.ad.demo.ads.InterstitialAdActivity;
@@ -20,12 +18,11 @@ import com.ad.demo.ads.OpenAdActivity;
 import com.ad.demo.ads.RewardedAdActivity;
 import com.ad.demo.ads.TemplateAdActivity;
 import com.ad.demo.ads.bidding.BiddingActivity;
-import com.ad.demo.ads.perloader.PerLoaderTestActivity;
+import com.ad.demo.ads.perloader.PerLoaderModeActivity;
 import com.ad.demo.ui.SimpleDividerItemDecoration;
 import com.tools.sdk_debug.AdDebugHelp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -80,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case "PerLoader MODE":
-                        intent = new Intent(MainActivity.this, PerLoaderTestActivity.class);
+                        intent = new Intent(MainActivity.this, PerLoaderModeActivity.class);
                         startActivity(intent);
                         break;
                     case "Bidding":

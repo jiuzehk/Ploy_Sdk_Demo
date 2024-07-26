@@ -1,10 +1,9 @@
-package com.ad.demo.ads.perloader;
+package com.ad.demo.ads.perloader.normal;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +12,11 @@ import com.poly.sdk.client.AdController;
 import com.poly.sdk.client.AdError;
 import com.poly.sdk.client.interstitial.InterstitialAdListener;
 import com.poly.sdk.client.interstitial.InterstitialPreLoader;
-import com.poly.sdk.client.preloader.PreLoader;
 import com.poly.sdk.client.preloader.RewardVideoPreLoader;
 import com.poly.sdk.client.video.RewardAdController;
 import com.poly.sdk.client.video.RewardVideoAdListener;
 
+// 预加载普通用法
 public class PerLoaderTestActivity extends AppCompatActivity {
     private static final String TAG = "PerLoaderTestActivity";
     private Button start_preloader;  //开启预加载
@@ -81,7 +80,7 @@ public class PerLoaderTestActivity extends AppCompatActivity {
 
 
     private void preloadRewardVideo() {
-        rewardVideoPreLoader = RewardVideoPreLoader.create(this, "NCZ00000004");
+        rewardVideoPreLoader = RewardVideoPreLoader.get(this, "NCZ00000004");
         rewardVideoPreLoader.setRewardVideoAdListener(new RewardVideoAdListener() {
             @Override
             public void onAdClicked() {
@@ -127,7 +126,7 @@ public class PerLoaderTestActivity extends AppCompatActivity {
     }
 
     private void preloadInterstitial() {
-        interstitialPreLoader = InterstitialPreLoader.create(this, "NCZ00000003");
+        interstitialPreLoader = InterstitialPreLoader.get(this, "NCZ00000003");
         interstitialPreLoader.setInterstitialAdListener(new InterstitialAdListener() {
             @Override
             public void onAdClicked() {
