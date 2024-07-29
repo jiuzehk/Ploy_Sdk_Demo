@@ -1,4 +1,4 @@
-package com.ad.demo.ads.perloader.normal;
+package com.ad.demo.ads.perloader;
 
 import android.os.Bundle;
 import android.util.Log;

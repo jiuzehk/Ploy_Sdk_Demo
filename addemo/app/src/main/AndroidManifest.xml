@@ -47,19 +47,10 @@
             android:name=".ads.bidding.BiddingActivity"
             android:exported="false"/>
         <activity
-            android:name=".ads.perloader.PerLoaderModeActivity"
-            android:exported="false"/>
-        <activity
-            android:name=".ads.perloader.advanced.PerLoaderAdvancedTestActivity"
-            android:exported="false"/>
-        <activity
-            android:name=".ads.perloader.normal.PerLoaderTestActivity"
+            android:name=".ads.perloader.PerLoaderTestActivity"
             android:exported="false"/>
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
-        <activity
-            android:name=".ads.perloader.advanced.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
