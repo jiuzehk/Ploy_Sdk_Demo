@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.Log;
 
 import com.poly.sdk.client.AdRequest;
+import com.poly.sdk.client.InitStatusListener;
 import com.poly.sdk.client.SdkConfiguration;
 
 
@@ -16,7 +17,17 @@ public class DemoApplication extends Application {
         SdkConfiguration sdkConfiguration = new SdkConfiguration.Builder()
                 .setPrintLog(BuildConfig.DEBUG)
                 .build();
-        AdRequest.init(this,sdkConfiguration);
+        AdRequest.init(this, sdkConfiguration, new InitStatusListener() {
+            @Override
+            public void onSuccess() {
+                Log.i("DemoApplication", "init onSuccess");
+            }
+
+            @Override
+            public void onFail(String s) {
+                Log.i("DemoApplication", "init onFail");
+            }
+        });
 
     }
 }
