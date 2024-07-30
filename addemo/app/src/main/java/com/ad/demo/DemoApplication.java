@@ -20,12 +20,12 @@ public class DemoApplication extends Application {
         AdRequest.init(this, sdkConfiguration, new InitStatusListener() {
             @Override
             public void onSuccess() {
-                Log.i("DemoApplication", "init onSuccess");
+                Log.i("DemoApplication", "onSuccess isInitialized = " + AdRequest.isInitialized());
             }
 
             @Override
-            public void onFail(String s) {
-                Log.i("DemoApplication", "init onFail");
+            public void onFail(String msg) {
+                Log.i("DemoApplication", "onFail msg = " + msg);
             }
         });
 
